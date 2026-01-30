@@ -1,9 +1,10 @@
-import Hobby from "./state/Hobby";
+import CheckboxContainer from "./map/expert/CheckboxContainer";
+import ProductContainer from "./map/expert/ProductContainer";
 
 function App() {
   return (
     <>
-     <Hobby />
+     <CheckboxContainer />
     </>  
   );
 }
