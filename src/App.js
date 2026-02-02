@@ -1,11 +1,9 @@
-import CheckboxContainer from "./map/expert/CheckboxContainer";
-import ProductContainer from "./map/expert/ProductContainer";
-import PracticeHobby from "./practice/PracticeState/PracticeHobby";
+import FoodContainer from "./ref/expert/FoodContainer";
 
 function App() {
   return (
     <>
-     <PracticeHobby />
+     <FoodContainer />
     </>  
   );
 }
