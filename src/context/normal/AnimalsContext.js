@@ -7,13 +7,14 @@ export const AnimalsContext = createContext({
 })
 
 // 2. 제공
-export const AnimalsProvider = ({children, i}) => {
+export const AnimalsProvider = ({children}) => {
   
   const [animals, setAnimals] = useState(["누렁이", "점박이", "얼룩이"])
+  
   const value = {
     state: {animals},
     actions: {
-      insert: () => {},
+      insert: (animal) => {setAnimals([...animals, animal])},
       remove: () => {}
     }
   }
@@ -22,7 +23,7 @@ export const AnimalsProvider = ({children, i}) => {
   // insert 메서드를 완성하시오!
 
   return (
-    <AnimalsContext.Provider value={value} i={i}>
+    <AnimalsContext.Provider value={value} setAnimals={setAnimals}>
       {children}
     </AnimalsContext.Provider>
   )
