@@ -1,9 +1,9 @@
-import FoodContainer from "./ref/expert/FoodContainer";
+import AnimalsContainer from "./context/normal/AnimalsContainer";
 
 function App() {
   return (
     <>
-     <FoodContainer />
+     <AnimalsContainer />
     </>  
   );
 }
