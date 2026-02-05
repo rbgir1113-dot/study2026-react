@@ -1,15 +1,18 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { RouteContext } from '../../context/expert/RouteContext';
+import useCountstore from '../../zustand/store/useCountStore';
 
 const Main = () => {
 
   const {state} = useContext(RouteContext)
+  const count = useCountstore((state) => state.count)
 
   return (
     <div>
       메인 페이지!😁
       <p>{state.user.userName}님 환영합니다</p>
+      <h1>카운트 : {count}</h1>
       {/* a 태그 사용시 깜빡임 생김 */}
       {/* <a href="/intro">인트로</a> */}
       {/* <Link style={{display: "block"}} to={"/intro"}>인트로</Link> <br /> */}

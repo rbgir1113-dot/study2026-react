@@ -11,11 +11,12 @@ const User = () => {
     userPhone: "010-1234-1234",
   }
 
-  const {state, actions} = useContext(RouteContext)
-  const {setUser, setPreviousUrl} = actions
+  const {state, actions, isLogin} = useContext(RouteContext)
+  const {setUser, setPreviousUrl, setIsLogin} = actions
 
   useEffect(() => {
     setUser(user)
+    setIsLogin(true)
   }, [])
   
   console.log("state", state)

@@ -1,0 +1,20 @@
+import React from 'react';
+import useCountstore from './store/useCountStore';
+import { Link } from 'react-router-dom';
+
+const Zustand01 = () => {
+
+  const {count, increase, decrease} = useCountstore((state) => state)
+
+
+  return (
+    <div>
+      <button onClick={decrease}> -1 </button>
+      <h1>{count}</h1>
+      <button onClick={increase}> +1 </button>
+      <Link to={"/"}> 메인 </Link>
+    </div>
+  );
+};
+
+export default Zustand01;

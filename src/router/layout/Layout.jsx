@@ -14,7 +14,7 @@ const Layout = () => {
         <Link style={style} to={"/detail"}>디테일</Link>
         <Link style={style} to={`/post/${getRandomInt()}`}>게시판</Link>
         <Link style={style} to={"/user"}>회원</Link>
-        <Link style={style} to={"/not-user"}>회원 전용</Link>
+        <Link style={style} to={"/not-user"}>회원전용</Link>
       </header>
       <main>
         {/* router에 등록된 children을 보여주는 태그 */}
